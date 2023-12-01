@@ -1,0 +1,5 @@
+# app.yaml
+runtime: python39
+entrypoint: gunicorn -b :$PORT -k uvicorn.workers.UvicornWorker api:app
+env_variables:
+  GCS_BUCKET_NAME: latam-challenge
